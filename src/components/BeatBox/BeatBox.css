@@ -5,28 +5,27 @@
 .BeatBox-container {
   margin: 0 auto;
   /*padding: 40px;*/
-  max-width: 20%;
-  width: 20%;
   display: inline-block;
-  min-width: 19%;
   box-sizing: border-box;
   background-image: url('../../public/tv.png');
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 20em;
 }
 
 
 .BeatBox-text {
-  text-align: center;
-  line-height: 525%;
-  font-size: 300%;
-  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 80%;
+  background-color: #0dfbfd;
+  z-index: -1;
 }
 
 
 .BeatBox-red {
   color: red;
 }
+
