@@ -1,0 +1,32 @@
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+
+@import '../variables.css';
+
+.BeatBox-container {
+  margin: 0 auto;
+  /*padding: 40px;*/
+  max-width: 20%;
+  width: 20%;
+  display: inline-block;
+  min-width: 19%;
+  box-sizing: border-box;
+  background-image: url('../../public/tv.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 20em;
+}
+
+
+.BeatBox-text {
+  text-align: center;
+  line-height: 525%;
+  font-size: 300%;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+.BeatBox-red {
+  color: red;
+}

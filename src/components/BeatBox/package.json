@@ -1,0 +1,6 @@
+{
+  "name": "BeatBox",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./BeatBox.js"
+}
