@@ -16,7 +16,7 @@ import fetch from './lib/fetch';
 const getRemote = (slot) => ({
   name: slot ? slot : 'heroku',
   url: `git@heroku.com:fluffy-beat.git`,
-  website: `https://fluffy-beat.herokuapp.com/`,
+  website: `http://fluffy-beat.herokuapp.com/`,
 });
 
 /**
