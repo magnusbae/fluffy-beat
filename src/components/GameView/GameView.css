@@ -1,0 +1,13 @@
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+@import '../variables.css';
+
+.GameView-container {
+  display: block;
+  width: 100%;
+}
+
+.GameView-marginbox {
+  margin-left: auto;
+  margin-right: auto;
+}
+

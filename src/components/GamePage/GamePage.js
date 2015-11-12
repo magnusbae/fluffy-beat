@@ -4,6 +4,7 @@ import React, { PropTypes, Component } from 'react';
 import styles from './GamePage.css';
 import TextBox from '../TextBox';
 import GameActionCreators from '../../actions/GameActionCreators';
+import GameView from '../GameView';
 
 import withStyles from '../../decorators/withStyles';
 
@@ -24,6 +25,7 @@ class GamePage extends Component {
   render() {
     return (
       <div>
+        <GameView />
         <div>
           <h3>Spillkontroll</h3>
           <TextBox maxLines={1} value={this.state.spillStrofe} onChange={this._handleChange.bind(this)} />

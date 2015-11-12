@@ -6,6 +6,7 @@ import http from './core/HttpClient';
 import App from './components/App';
 import ContentPage from './components/ContentPage';
 import GamePage from './components/GamePage';
+import GameView from './components/GameView';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import NotFoundPage from './components/NotFoundPage';
@@ -17,7 +18,7 @@ const router = new Router(on => {
     return component && <App context={state.context}>{component}</App>;
   });
 
-  on('/', async () => <App />);
+  on('/', async () => <GameView />);
 
   on('/game', async () => <GamePage />);
 

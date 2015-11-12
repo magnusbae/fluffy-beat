@@ -5,7 +5,7 @@ import EventEmitter from 'eventemitter3';
 import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
 
 let EE;
-let viewport = {width: 1920, height: 1080}; // Default size for server-side rendering
+let viewport = {width: 1600, height: 800}; // Default size for server-side rendering
 const RESIZE_EVENT = 'resize';
 
 function handleWindowResize() {
