@@ -8,4 +8,17 @@ export default {
       strofe: strofe,
     });
   },
+
+  showScreen: function(number) {
+    Dispatcher.dispatch({
+      type: ActionTypes.SHOW_SCREEN,
+      screen: number,
+    });
+  },
+
+  showAllScreens: function () {
+    Dispatcher.dispatch({
+      type: ActionTypes.SHOW_ALL_SCREENS,
+    });
+  },
 };

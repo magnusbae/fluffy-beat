@@ -24,6 +24,11 @@ class GameView extends Component {
   constructor(props) {
     super(props);
     this._onChange = this._onChange.bind(this);
+    this.state = {
+      words: GameStore.getWords(),
+      screens: GameStore.getScreenState(),
+      red: GameStore.getWordColor(),
+    };
   }
 
   componentWillUnmount() {
@@ -35,11 +40,14 @@ class GameView extends Component {
   }
 
   _onChange() {
-    this.setState({words: GameStore.getWords()});
+    this.setState({
+      words: GameStore.getWords(),
+      screens: GameStore.getScreenState(),
+      red: GameStore.getWordColor(),
+    });
   }
 
-  render() {
-    const words = _.get(this, 'state.words') || ['every', 'step', 'you', 'take', 'every'];
+  _renderCss(words) {
     const width = this.props.viewport.width / 5;
     const height = width * 0.879;
 
@@ -50,13 +58,20 @@ class GameView extends Component {
           padding-bottom: ${height / 30}px; \
         } \
         .GameView-marginbox { \
-          width: ${width * words.length}px; \
+          width: ${width * words}px; \
         }`);
+  }
+
+  render() {
+    const words = _.get(this, 'state.words');
+    const screens = _.get(this, 'state.screens');
+    const reds = _.get(this, 'state.red');
+    this._renderCss.call(this, words.length);
 
     const boxes = _.map(words, function(word, index) {
-      return (
-        <BeatBox content={word} red={index % 3 === 0}/>
-      );
+      return (screens[index] === true) ? 
+      (<BeatBox content={word} red={_.contains(reds, index)}/>) 
+        : (<BeatBox content={index + 1} />);
     });
 
     return (

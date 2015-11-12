@@ -2,8 +2,24 @@
 
 @import '../variables.css';
 
-.ContentPage-container {
+.GamePage-container {
   margin: 0 auto;
   padding: 0 0 40px;
   max-width: var(--max-content-width);
 }
+
+.GamePage-button {
+  width: 4em;
+  height: 4em;
+  margin: 1em;
+  margin-top: 0px;
+}
+
+.button-red {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightcoral;
+}
+
